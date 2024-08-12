@@ -20,7 +20,7 @@ while True:
         
     # Display what the player chose
     if playerMove == 'r':
-        print('ROCK versu...')
+        print('ROCK versus...')
     elif playerMove == 'p':
         print('PAPER versus...')
     elif playerMove == 's':
