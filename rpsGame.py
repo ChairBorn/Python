@@ -37,4 +37,25 @@ while True:
     elif randomNumber == 3:
         computerMove = 's'
         print('SCISSORS')
-    
+    # Display and record the win/loss/tie:
+    if playerMove == computerMove:
+        print('It is a tie!')
+        ties = ties + 1
+    elif playerMove == 'r' and computerMove == 's':
+        print('You win!')
+        wins = wins + 1
+    elif playerMove == 'p' and computerMove == 'r':
+        print('You win!')
+        wins = wins + 1
+    elif playerMove == 's' and computerMove == 'p':
+        print('You win!')
+        wins = wins + 1
+    elif playerMove == 'r' and computerMove == 'p':
+        print('You lose!')
+        losses = losses + 1
+    elif playerMove == 'p' and computerMove == 's':
+        print('You lose!')
+        losses = losses + 1
+    elif playerMove == 's' and computerMove == 'r':
+        print('You lose!')
+        losses = losses + 1
