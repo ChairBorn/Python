@@ -1,2 +1,6 @@
-def greeting()
-print('Fuck off, Partner')
+def hello():
+    print('Hi')
+hello()
+def greet():
+    print('yo')
+greet()
