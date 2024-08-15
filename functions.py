@@ -1,6 +1,10 @@
-def hello():
-    print('Hi')
-hello()
-def greet():
-    print('yo')
-greet()
+def spam(divideBy):
+    try:
+        return 42 / divideBy
+    except ZeroDivisionError:
+        print('Error: Invalid Argument. ')
+
+print(spam(2))
+print(spam(12))
+print(spam(0))
+print(spam(1))
