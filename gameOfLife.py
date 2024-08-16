@@ -36,4 +36,29 @@ while True: # Main Program Loop
             numNeighbors = 0
             if currentCells[leftCoord][aboveCoord] == '#':
                 numNeighbors += 1 # Top Left Neighbor is alive
+            if currentCells[x][aboveCoord] == '#':
+                numNeighbors += 1 # Top Neigbor alive
+            if currentCells[rightCoord][aboveCoord] == '#':
+                numNeighbors += 1 # Right Top Neighbor alive
+            if currentCells[leftCoord][y] == '#':
+                numNeighbors += 1 # Left Neighbor is alive
+            if currentCells[rightCoord][y] == '#':
+                numNeighbors += 1 # Right Neighbor is alive
+            if currentCells[leftCoord][belowCoord] == '#':
+                numNeighbors += 1 # Bottom Left Neighbor alive
+            if currentCells[x][belowCoord] == '#':
+                numNeighbors += 1 # Bottom Neighbor alive
+            if currentCells[rightCoord][belowCoord] == '#':
+                numNeighbors += 1 # Bottom Right Neighbor alive
                 
+            # Set cell based on Conway's game of life rules:
+            if currentCells[x][y] == '#' and (numNeighbors == 2 or numNeighbors == 3):
+                # Living cells with 2 or 3 neighbors stay alive:
+                nextCells[x][y] = '#'
+            elif currentCells[x][y] == ' ' and numNeighbors == 3:
+                # Dead cells with 3 neighbors become alive:
+                nextCells[x][y] = '#'
+            else:
+                # everything else dies or stays dead:
+                nextCells[x][y] = ' '
+    time.sleep(1) # Add a 1 second pause to reduce the flickering
