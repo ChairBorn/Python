@@ -9,3 +9,4 @@ def printBoard(board):
     print('+-+-+-+')
     print(board['Low-L'] + '|' + board['Low-M'] + '|' + board['Low-R'])
     print('+-+-+-+')
+printBoard(theBoard)
