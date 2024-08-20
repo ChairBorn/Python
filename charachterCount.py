@@ -1,3 +1,5 @@
+import pprint # Import pretty print to format the dict items
+
 message = 'It was a bright cold day in February, and the clocks were striking thirteen.'
 count = {}
 
