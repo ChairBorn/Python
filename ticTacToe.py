@@ -1,4 +1,4 @@
-theBoard = {'Top-L': ' ', 'Top-M': ' ', 'Top-R': ' ',
+theBoard = {'Top-L': ' ', 'Top-M': ' ', 'Top-R': ' ', # The Data Structure that models the TicTacToe board
             'Mid-L': ' ', 'Mid-M': ' ', 'Mid-R': ' ',
             'Low-L': ' ', 'Low-M': ' ', 'Low-R': ' '}
 
