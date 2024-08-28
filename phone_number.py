@@ -1,5 +1,6 @@
 import re
 
-phoneNumRegex = re.compile(r'\d{3}-\d{3}-\d{4}')
+phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
 mo = phoneNumRegex.search('My number is 322-444-4567.')
-print('Phone number found:', mo.group())
+area_code, main_number = mo.groups() # mo.groups() returns a tuple
+print('Phone number found: ' + 'Area code: ' + area_code + ', Main number: ' + main_number)
