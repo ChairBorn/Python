@@ -6,4 +6,4 @@ area_code, main_number = mo.groups() # mo.groups() returns a tuple
 print('Phone number found: ' + 'Area code: ' + area_code + ', Main number: ' + main_number)
 
 begins_num = re.compile(r'^\d+') # ^ means the string must begin with a number
-print(begins_num.search(r'(12 gates), (table with 10 chairs)')) # Returns 12
+print(begins_num.search('1234 is a number').group()) # 1234, instead of console output, we can use group() to get the matched string
