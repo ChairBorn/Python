@@ -7,4 +7,4 @@ responseMenu = pyip.inputMenu(['a', 'b', 'c']) # Accepts only 'a', 'b', or 'c' a
 responseChoice = pyip.inputEmail() # Accepts only email addresses as input
 responsePath = pyip.inputFilepath() # Accepts only file paths as input
 
-response = pyip.inputNum('Enter a number: ', min=1, lessThan=100) # Prompts user to enter a number
+response = pyip.inputNum('Enter a number: ', min=1, lessThan=100, limit=5, timeout=60) # Prompts user to enter a number larger rthan 1 and less than 100, times out after 60 seconds
